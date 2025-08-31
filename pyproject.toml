@@ -1,0 +1,38 @@
+[project]
+name = "3dwire"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "accelerate>=1.10.1",
+    "beartype>=0.21.0",
+    "einops>=0.8.1",
+    "ema-pytorch>=0.7.7",
+    "gateloop-transformer>=0.2.5",
+    "local-attention>=1.11.2",
+    "pyg-lib",
+    "pytorch-custom-utils>=0.0.21",
+    "torch==2.6.0",
+    "torch-geometric>=2.6.1",
+    "torchaudio==2.6.0",
+    "torchtyping>=0.1.5",
+    "torchvision==0.21.0",
+    "tqdm>=4.67.1",
+    "trimesh>=4.7.4",
+    "vector-quantize-pytorch>=1.23.2",
+    "wandb>=0.21.3",
+    "x-transformers==1.40.2",
+]
+
+
+[[tool.uv.index]]
+url = "https://pypi.org/simple"
+priority = "default"
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cu124"
+priority = "supplemental"
+
+[tool.uv.sources]
+pyg-lib = { url = "https://data.pyg.org/whl/torch-2.6.0%2Bcu124/pyg_lib-0.4.0%2Bpt26cu124-cp312-cp312-linux_x86_64.whl" }

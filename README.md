@@ -34,6 +34,18 @@ Once downloaded, extract the zip file into the `npz` directory as shown in the d
 - **README.md**: This file, providing an overview of the project.
 
 
+## Installation
+The code is tested in docker enviroment [nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04](https://hub.docker.com/layers/nvidia/cuda/12.4.1-cudnn-devel-ubuntu22.04/images/sha256-0a1cb6e7bd047a1067efe14efdf0276352d5ca643dfd77963dab1a4f05a003a4).
+The following are instructions for setting up the environment in a Linux system from scratch.
+
+First, clone this repository:
+
+      git clone git@github.com:qixuema/3dwire.git
+
+Then, create an UV environment.
+      cd 3dWire
+      uv sync
+      source .venv/bin/activate   # On Linux
 
 To train the model, please use the following commands:
 
