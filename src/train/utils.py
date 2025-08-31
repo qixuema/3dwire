@@ -9,8 +9,9 @@ from torchtyping import TensorType
 from beartype import beartype
 from beartype.typing import Tuple
 from math import ceil
-from train.helpers import l1norm
 from einops import rearrange, repeat, reduce, einsum
+
+from .helpers import l1norm
 
 
 def save_static_dict_keys(static_dict, file_path='static_dict_keys.json'):

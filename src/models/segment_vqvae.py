@@ -14,8 +14,8 @@ from vector_quantize_pytorch import ResidualLFQ
 from torch_geometric.nn.conv import SAGEConv
 from .modules import ResnetBlock
 
-from train.helpers import exists, default, is_odd, first
-from train.utils import (
+from src.train.helpers import exists, default, is_odd, first
+from src.train.utils import (
     discretize, 
     get_derived_segment_features,
     get_derived_segment_edge_features,
@@ -190,6 +190,7 @@ class SegmentVQVAE(Module):
         self.commit_loss_weight = commit_loss_weight
         self.bin_smooth_blur_sigma = bin_smooth_blur_sigma
 
+    @property
     def device(self):
         return next(self.parameters()).device
 

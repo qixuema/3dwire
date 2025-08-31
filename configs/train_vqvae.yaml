@@ -6,6 +6,7 @@ lr: 0.0001
 num_workers: 8
 num_gpus: 4
 save_every_epoch: 1
+log_every_step: 5
 
 use_wandb_tracking: true
 wandb_project_name: segment_vqvae
@@ -13,7 +14,7 @@ wandb_run_name: vqvae
 
 
 DATA:
-    train_set_file_path: /studio/datasets/3dwire_dataset.pkl
+    train_set_file_path: /root/studio/projects/3dwire/3dwire/all_samples.pkl
     replication: 1
 
 MODEL:

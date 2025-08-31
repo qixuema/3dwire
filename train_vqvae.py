@@ -1,24 +1,17 @@
-import os
-import sys
-import numpy as np
-import random
-import torch
-from train import (
-    SegmentVQVAE,
-    WireframeDataset,
-    SegmentVQVAETrainer
-)
-
 from argparse import ArgumentParser
-from train.config import NestedDictToClass, load_config
+
+from src.models import SegmentVQVAE
+from src.train.trainer_vqvae import SegmentVQVAETrainer
+from src.data.dataset import WireframeDataset
+from src.train.config import NestedDictToClass, load_config
 
 # Arguments
 program_parser = ArgumentParser(description='Train a segment vqvae model.')
-program_parser.add_argument('--vqvae_config', type=str, default='', help='Path to config file.')
+program_parser.add_argument('--config', type=str, default='configs/train_vqvae.yaml', help='Path to config file.')
 
 args, unknown_args = program_parser.parse_known_args()
 
-cfg = load_config(args.vqvae_config)
+cfg = load_config(args.config)
 args = NestedDictToClass(cfg)
     
 train_dataset = WireframeDataset(

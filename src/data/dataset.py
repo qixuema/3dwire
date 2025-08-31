@@ -5,8 +5,6 @@ from torch.utils.data import Dataset
 from torch.nn.utils.rnn import pad_sequence
 import numpy as np
 
-
-
 def scale_and_jitter(vertices, interval=(0.9, 1.1), jitter=0.1):
     assert isinstance(interval, tuple)
     

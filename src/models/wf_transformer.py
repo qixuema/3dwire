@@ -11,7 +11,7 @@ from tqdm import tqdm
 from .segment_vqvae import SegmentVQVAE
 from .modules import GateLoopBlock
 
-from train.helpers import (
+from src.train.helpers import (
     pad_to_length, divisible_by,
     safe_cat, exists, default,
     set_module_requires_grad_

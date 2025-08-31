@@ -2,11 +2,12 @@ import torch
 from torch.nn import Module
 from einops import reduce
 from einops.layers.torch import Rearrange
-from train.helpers import exists, default
 from torch import nn
 from torch.nn import ModuleList
 from gateloop_transformer import SimpleGateLoopLayer
-from train.helpers import is_tensor_empty
+
+from src.train.helpers import exists, default
+from src.train.helpers import is_tensor_empty
 
 # resnet block
 class SqueezeExcite(Module):
