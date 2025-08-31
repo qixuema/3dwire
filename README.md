@@ -33,6 +33,16 @@ Once downloaded, extract the zip file into the `npz` directory as shown in the d
 - **read_npz.py**: A Python script for reading and visualizing the wireframe data from NPZ files.
 - **README.md**: This file, providing an overview of the project.
 
+
+
+To train the model, please use the following commands:
+
+      # Train vqvae
+      accelerate launch --config_file configs/default_config.yaml train_vqvae.py --config configs/train_vqvae.yaml
+
+      # Train transformer
+      accelerate launch --config_file configs/default_config.yaml train_transformer.py --config configs/train_transformer.yaml
+
 ## Usage
 
 ### Prerequisites
