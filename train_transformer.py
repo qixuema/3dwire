@@ -1,17 +1,13 @@
-import os
-import sys
-from train import (
-    SegmentVQVAE,
-    WireframeDataset,
-    WireframeTransformerTrainer,
-    WireframeTransformer,
-)
 from argparse import ArgumentParser
-from train.config import NestedDictToClass, load_config
+
+from src.models import SegmentVQVAE, WireframeTransformer
+from src.train.trainer_transformer import WireframeTransformerTrainer
+from src.data.dataset import WireframeDataset
+from src.train.config import NestedDictToClass, load_config
 
 # Arguments
 program_parser = ArgumentParser(description='Train a segment vqvae model.')
-program_parser.add_argument('--config', type=str, default='', help='Path to config file.')
+program_parser.add_argument('--config', type=str, default='configs/train_transformer.yaml', help='Path to config file.')
 
 args, unknown_args = program_parser.parse_known_args()
 

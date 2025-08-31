@@ -2,7 +2,7 @@ resume_training: false
 from_start: false
 
 epochs: 160
-batch_size: 64
+batch_size: 4
 lr: 0.0001
 num_workers: 32
 num_gpus: 4
@@ -17,7 +17,7 @@ wandb_run_name: transformer
 
 
 DATA:
-    dataset_file_path: /studio/datasets/3dwire_dataset.pkl
+    dataset_file_path: /root/studio/projects/3dwire/3dwire/all_samples.pkl
     replication: 1
 
 MODEL:
@@ -44,7 +44,7 @@ MODEL:
     # for transformer
     dim: 512
     attn_heads: 16
-    max_seq_len: 520
+    max_seq_len: 1616
     coarse_pre_gateloop_depth: 2
     fine_pre_gateloop_depth: 2
     
