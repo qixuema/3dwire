@@ -122,7 +122,7 @@ def get_derived_segment_edge_features(
     
     segment_edge_segment_norm = segment_vectors.norm(dim = -1)
     
-    dot_product_all = einsum('ijk, ijk->ij', segment_vectors[:, :, 0, :], segment_vectors[:, :, 1, :])
+    dot_product_all = einsum(segment_vectors[:, :, 0, :], segment_vectors[:, :, 1, :], 'i j k, i j k->i j')
 
     angle_radians = torch.acos(dot_product_all/(segment_edge_segment_norm[:, :, 0] * segment_edge_segment_norm[:, :, 1] + 1e-8))
 

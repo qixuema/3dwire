@@ -472,7 +472,6 @@ class SegmentVQVAE(Module):
             segment_embed = encoded,
             segments = segments,
             segment_mask=segment_mask,
-            rvq_sample_codebook_temp = rvq_sample_codebook_temp
         )
 
         if return_codes:
