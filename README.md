@@ -40,11 +40,22 @@ The following are instructions for setting up the environment in a Linux system 
 
 First, clone this repository:
 
-      git clone git@github.com:qixuema/3dwire.git
+    git clone https://github.com/qixuema/3dwire.git
+    # or (with SSH)
+    git clone git@github.com:qixuema/3dwire.git
 
-Then, create an UV environment.
-      cd 3dWire
+Then, make sure you have [UV](https://github.com/astral-sh/uv) installed.  
+If not, install it with:
+
+      pip install uv
+
+Next, create the environment and install dependencies:
+
+      cd 3dwire
       uv sync
+
+Finally, activate the environment:
+
       source .venv/bin/activate   # On Linux
 
 To train the model, please use the following commands:
@@ -55,7 +66,7 @@ To train the model, please use the following commands:
       # Train transformer
       accelerate launch --config_file configs/default_config.yaml train_transformer.py --config configs/train_transformer.yaml
 
-## Usage
+## DATA Visualization
 
 ### Prerequisites
 
